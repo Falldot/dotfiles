@@ -94,7 +94,7 @@ arch-chroot /mnt
 
 Установка региона
 ```
-ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Sakhalin /etc/localtime
 hwclock --systohc
 ```
 
@@ -184,29 +184,10 @@ sudo nano /etc/pacman.conf
 # include ...
 ```
 
-Видеокарта
+# Видеокарта
+
 ```sh
 sudo pacman -Suy nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vilkan-icd-loader lib32-vulkan-icd-loader lib32-opencl-nvidia opencl-nvidia libxnvctrl
 
 reboot
-```
-
-# GUI
-Sway
-```sh
-sudo pacman -S sway wayland alacritty fish wofi htop polkit
-
-# Настройка fish
-chsh -s /usr/bin/fish
-fish
-
-# Настройка sway
-mkdir ~/.config/sway
-cp /etc/sway/config ~/.config/sway/
-
-# Звук
-sudo pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack
-
-reboot
-
 ```
