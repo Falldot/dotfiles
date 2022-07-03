@@ -7,9 +7,9 @@ window:
     y: 10
 
   # full / none
-  decorations: full
+  decorations: none
 
-  opacity: 1
+  opacity: 0.95
 
   # Windowed / Maximized / Fullscreen
   startup_mode: Windowed
@@ -22,19 +22,19 @@ scrolling:
 
 font:
   normal:
-    family: Fira Code
+    family: FiraCode Nerd Font
     style: Regular
 
   bold:
-    family: Fira Code
+    family: FiraCode Nerd Font
     style: Bold
 
   italic:
-    family: Fira Code
+    family: FiraCode Nerd Font
     style: Italic
 
   bold_italic:
-    family: Fira Code
+    family: FiraCode Nerd Font
     style: Bold Italic
 
   size: 10.0
@@ -186,16 +186,16 @@ colors:
   # When set to `true`, selected text will be copied to the primary clipboard.
   #save_to_clipboard: false
 
-#cursor:
+cursor:
   # Cursor style
-  #style:
+  style:
     # Cursor shape
     #
     # Values for `shape`:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    #shape: Block
+    shape: Block
 
     # Cursor blinking state
     #
@@ -204,7 +204,7 @@ colors:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    #blinking: Off
+    blinking: Off
 
   # Vi mode cursor style
   #
