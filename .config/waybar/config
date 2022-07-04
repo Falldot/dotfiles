@@ -18,8 +18,8 @@
     "modules-right": [
         "tray",
         "custom/pipewire",
-        "custom/lang",
-        "sway/language"
+        "sway/language",
+        "network"
     ],
     
     "sway/workspaces": {
@@ -139,12 +139,16 @@
     // },
 
     "network": {
-        // "interface": "wlp2*",
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        // "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
     },
 
     "custom/pipewire": {
@@ -154,12 +158,6 @@
         "signal": 8,
         "format": "{icon} {percentage}",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "mute": "",
             "default": ["", "", ""]
         }

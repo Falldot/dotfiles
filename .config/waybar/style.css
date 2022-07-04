@@ -31,8 +31,16 @@ window#waybar {
     background-color: #eb4d4b;
 }
 
+#custom-pipewire {
+    color: #fff;
+    font-weight: 600;
+}
+
+#network {
+    padding-right: 10px;
+}
+
 #clock,
-#pulseaudio,
 #tray,
 #language
 {
