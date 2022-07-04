@@ -2,17 +2,17 @@ sort=-time
 
 layer=overlay
 
-background-color=#2f343f
+background-color=#030305ca
 
 width=300
 
 height=110
 
-border-size=0
+border-size=2
 
-border-color=#88c0d0
+border-color=#c50ed2ca
 
-border-radius=15
+border-radius=5
 
 icons=1
 
@@ -25,13 +25,13 @@ ignore-timeout=1
 font=FiraCode Nerd Font 10
 
 [urgency=low]
-border-color=#2f343f
+border-color=#c50ed2
 
 [urgency=normal]
-border-color=#2f343f
+border-color=#c50ed2
 
 [urgency=high]
-border-color=#2f343f
+border-color=#c50ed2
 default-timeout=0
 
 [category=mpd]

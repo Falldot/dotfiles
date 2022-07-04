@@ -8,6 +8,7 @@ echo '[MY_SCRIPT] Установка alacritty fish wofi htop'
 sudo pacman -S alacritty fish wofi htop
 
 sudo mkdir -rf $HOME/$AUR
+sudo mkdir $HOME/screenshots
 
 echo '[MY_SCRIPT] Установка yay'
 sudo pacman -S git
@@ -15,7 +16,7 @@ cd $HOME/$AUR && git clone https://$AUR/yay.git && cd yay && makepkg -si
 yay -Y --gendb
 
 echo '[MY_SCRIPT] Sway'
-yay -S wayland polkit sway swaybg swaylock swaylock-effects-git swayidle-git waybar-git otf-font-awesome mako-git grim-git slurp-git
+yay -S wayland polkit sway swaybg swaylock swayimg-git swaylock-effects-git swayidle-git waybar-git otf-font-awesome mako-git grim-git slurp-git
 
 echo '[MY_SCRIPT] Установка Fira Code шрифт'
 yay -S ttf-fira-code nerd-fonts-fira-code
@@ -39,5 +40,9 @@ echo '[MY_SCRIPT] Fish'
 chsh -s /usr/bin/fish
 rm -rf $HOME/.config/fish
 ln -s $(pwd)/.config/fish $HOME/.config
+
+echo '[MY_SCRIPT] Mako'
+rm -rf $HOME/.config/mako
+ln -s $(pwd)/.config/mako $HOME/.config
 
 sudo pacman -Sc
