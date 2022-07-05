@@ -13,7 +13,7 @@
     "telemetry.telemetryLevel": "off",
     "editor.guides.bracketPairs": true,
     "editor.guides.bracketPairsHorizontal": true,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "'Fira Code', 'Font Awesome 6 Brands', 'Font Awesome 6 Free', 'Font Awesome 6 Free Solid'",
     "explorer.decorations.badges": false,
     "workbench.iconTheme": "eq-material-theme-icons",
     "explorer.fileNesting.enabled": true,
