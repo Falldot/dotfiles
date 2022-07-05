@@ -77,7 +77,7 @@ mount ${boot_раздел} /mnt/boot/EFI # если EFI
 
 # Установка системы
 ```sh
-pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware dosfstools btrfs-progs intel-ucode iucode-tool nano
+pacstrap -i /mnt base linux-zen linux-zen-headers linux-firmware btrfs-progs intel-ucode iucode-tool nano
 ```
 
 Файл конфигурации файловых систем
@@ -137,7 +137,7 @@ passwd
 
 Загрузчик
 ```sh
-pacman -S grub efibootmgr dhcpcd dhclient networkmanager
+pacman -S grub efibootmgr sudo dhcpcd dhclient networkmanager
 
 grub-install ${диск}
 # если ошибка
@@ -160,7 +160,7 @@ nano /etc/sudoers
 ```
 
 ```sh
-useradd -m -G wheel -s /bin/bash ${name} # onlt smallcase
+useradd -m -G wheel -s /bin/bash ${name} # only smallcase
 passwd ${name}
 exit
 ```
