@@ -69,19 +69,8 @@ set $gnome-preferences org.gnome.desktop.iwm.preferences
 exec_always {
         gsettings set $gnome-schema gtk-theme 'Sweet-Dark'
         gsettings set $gnome-preferences theme "Sweet-Dark"
-        # gsettings set $gnome-schema icon-theme 'Mojave-CT-Classic'
         gsettings set $gnome-schema font-name 'Open Sans 10'
 }
-
-# Бинды
-bindsym $mod+Return exec $term
-bindsym $mod+BackSpace kill
-bindsym $mod+p exec $menu
-
-floating_modifier $mod normal
-
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # swaylock
 
@@ -94,7 +83,14 @@ exec swayidle -w \
     before-sleep $lock
 
 set $lockman exec bash ~/.config/sway/lockman.sh
-bindsym $mod+0 exec $lockman
+
+
+floating_modifier $mod normal
+
+# Бинды
+
+bindsym $mod+Return exec $term
+bindsym $mod+BackSpace kill
 
 # Screenshots
 
@@ -107,34 +103,47 @@ bindsym XF86AudioRaiseVolume exec "pw-volume change +2.5%; pkill -RTMIN+8 waybar
 bindsym XF86AudioLowerVolume exec "pw-volume change -2.5%; pkill -RTMIN+8 waybar"
 bindsym XF86AudioMute exec "pw-volume mute toggle; pkill -RTMIN+8 waybar"
 
+bindsym --to-code {
+    $mod+p exec $menu
+    $mod+0 exec $lockman
+
+    # Move your focus around
+    $mod+$left focus left
+    $mod+$down focus down
+    $mod+$up focus up
+    $mod+$right focus right
+
+    # Move the focused window with the same, but add Shift
+    $mod+Shift+$left move left
+    $mod+Shift+$down move down
+    $mod+Shift+$up move up
+    $mod+Shift+$right move right
+    # Ditto, with arrow keys
+    $mod+Shift+Left move left
+    $mod+Shift+Down move down
+    $mod+Shift+Up move up
+    $mod+Shift+Right move right
+
+    Ctrl+Alt+$right workspace next
+    Ctrl+Alt+$left workspace prev
+}
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 # Moving around:
 #
-    # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    
     # Or use $mod+[up|down|left|right]
     # bindsym $mod+Left focus left
     # bindsym $mod+Down focus down
     # bindsym $mod+Up focus up
     # bindsym $mod+Right focus right
 
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
-#
+    
 # Workspaces:
 #
-    bindsym Ctrl+Alt+$right workspace next
-    bindsym Ctrl+Alt+$left workspace prev
+    
     # Switch to workspace
 
     bindsym $mod+1 workspace number 1
