@@ -82,7 +82,7 @@ exec swayidle -w \
     resume 'swaymsg "output * dpms on"' \
     before-sleep $lock
 
-set $lockman exec bash ~/.config/sway/lockman.sh
+set $lockman exec bash ~/.config/sway/scripts/lockman.sh
 
 
 floating_modifier $mod normal
@@ -92,16 +92,7 @@ floating_modifier $mod normal
 bindsym $mod+Return exec $term
 bindsym $mod+BackSpace kill
 
-# Screenshots
-
-bindsym Print exec grim ~/screenshots/screen-"$(date +%s)".png && wl-copy < ~/screenshots/screen-"$(date +%s)".png
-bindsym $mod+Print exec grim -g "$(slurp)" ~/screenshots/screen-"$(date +%s)".png && wl-copy < ~/screenshots/screen-"$(date +%s)".png
-
-# Pipeware
-
-bindsym XF86AudioRaiseVolume exec "pw-volume change +2.5%; pkill -RTMIN+8 waybar"
-bindsym XF86AudioLowerVolume exec "pw-volume change -2.5%; pkill -RTMIN+8 waybar"
-bindsym XF86AudioMute exec "pw-volume mute toggle; pkill -RTMIN+8 waybar"
+####################################
 
 bindsym --to-code {
     $mod+p exec $menu
@@ -236,4 +227,4 @@ bar {
     swaybar_command waybar
 }
 
-include /etc/sway/config.d/*
+include $HOME/.config/sway/sway.d/*.conf

@@ -16,7 +16,7 @@ cd $HOME/$AUR && git clone https://$AUR/yay.git && cd yay && makepkg -si
 yay -Y --gendb
 
 echo '[MY_SCRIPT] Sway'
-yay -S wayland polkit sway swaybg swaylock swayimg-git swaylock-effects-git swayidle-git waybar-git wlay-git wl-clipboard-git otf-font-awesome mako-git grim-git slurp-git
+yay -S wayland polkit sway swaybg swaylock swayimg-git swaylock-effects-git swayidle-git waybar-git wlay-git wl-clipboard-git otf-font-awesome mako-git grim-git slurp-git swappy-git jq-git
 
 echo '[MY_SCRIPT] Установка Fira Code шрифт'
 yay -S ttf-fira-code nerd-fonts-fira-code
