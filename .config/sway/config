@@ -1,6 +1,7 @@
 # Автозапуск
 exec waybg -i ~/bg.jpg
-exec mako
+# Notification Daemon
+exec swaync
 
 # Mod
 set $mod Mod4
@@ -26,7 +27,10 @@ gaps outer 0
 smart_gaps off
 
 # Отключаем заголовки окн
-default_border pixel 1
+default_border pixel 0
+
+titlebar_border_thickness 0                                                     
+titlebar_padding 1
 
 # Размер рамок
 for_window [tiling] border pixel 1
@@ -34,12 +38,14 @@ for_window [tiling] border pixel 1
 # Отключаем рамки когда одно окно
 smart_borders on
 
+
 # Цвета рамок
-	#                       Рамка   Фон   Индикатор Родительская_рамка
-	client.focused			#c50ed2 #c50ed2 #c50ed2 #c50ed2 
+	#                           Рамка   Фон   Индикатор Родительская_рамка
+	client.focused			    #c50ed2 #c50ed2 #c50ed2 #c50ed2
+    client.focused_tab_title    #c50ed28f #c50ed28f #c50ed28f #c50ed28f
 	# client.focused_inactive	#535d6c #535d6c #535d6c #535d6c
-	# client.unfocused		#535d6c #535d6c #535d6c #535d6c
-	# client.urgent			#535d6c #535d6c #535d6c #535d6c
+	# client.unfocused		    #535d6c #535d6c #535d6c #535d6c
+	# client.urgent			    #535d6c #535d6c #535d6c #535d6c
 	# client.placeholder		#535d6c #535d6c #535d6c #535d6c
 
 	#client.focused — окно в фокусе
@@ -47,8 +53,8 @@ smart_borders on
 	#client.focused_inactive — окно в фокусе но не активно
 	#client.urgent — окно требует внимания (всплывающее) 
 
-# Шрифты
-font pango:FiraCode Nerd Font 10
+# Шрифт
+font pango:FiraCode Nerd Font 9
 
 input "2:14:SynPS/2_Synaptics_TouchPad" {
     dwt enabled

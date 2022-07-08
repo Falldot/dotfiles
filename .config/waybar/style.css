@@ -36,7 +36,7 @@ window#waybar {
     font-weight: 600;
 }
 
-#network {
+#network, #custom-notification {
     padding-right: 10px;
 }
 

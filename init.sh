@@ -16,7 +16,7 @@ cd $HOME/$AUR && git clone https://$AUR/yay.git && cd yay && makepkg -si
 yay -Y --gendb
 
 echo '[MY_SCRIPT] Sway'
-yay -S wayland polkit sway swaybg swaylock swayimg-git swaylock-effects-git swayidle-git waybar-git wlay-git wl-clipboard-git otf-font-awesome mako-git grim-git slurp-git swappy-git jq-git
+yay -S wayland polkit sway swaybg-git swaylock-git swayimg-git swaylock-effects-git swayidle-git waybar-git wlay-git wl-clipboard-git otf-font-awesome swaync-git grim-git slurp-git swappy-git jq-git
 
 echo '[MY_SCRIPT] Установка Fira Code шрифт'
 yay -S ttf-fira-code nerd-fonts-fira-code
@@ -41,8 +41,8 @@ chsh -s /usr/bin/fish
 rm -rf $HOME/.config/fish
 ln -s $(pwd)/.config/fish $HOME/.config
 
-echo '[MY_SCRIPT] Mako'
-rm -rf $HOME/.config/mako
-ln -s $(pwd)/.config/mako $HOME/.config
+echo '[MY_SCRIPT] Swaync'
+rm -rf $HOME/.config/swaync
+ln -s $(pwd)/.config/swaync $HOME/.config
 
 sudo pacman -Sc
