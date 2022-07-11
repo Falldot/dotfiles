@@ -1,6 +1,6 @@
 # Arch + Sway
 
-![screenshot](https://github.com/Falldot/dotfiles/img/swappy-20220712_094601.png)
+![screenshot](https://github.com/Falldot/dotfiles/blob/master/img/swappy-20220712_094601.png)
 ## Software
 
 * [sway](https://github.com/swaywm/sway) - Tiling window manager, i3-compatible Wayland compositor
