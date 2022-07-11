@@ -1,5 +1,6 @@
 # Arch + Sway
 
+![screenshot](https://github.com/Falldot/dotfiles/img/swappy-20220712_094601.png)
 ## Software
 
 * [sway](https://github.com/swaywm/sway) - Tiling window manager, i3-compatible Wayland compositor
@@ -9,6 +10,7 @@
 ---
 * [swaylock-effects](https://github.com/mortie/swaylock-effects) - Screen locker
 * [swayidle](https://github.com/swaywm/swayidle) - Idle management daemon
+* [swayimg](https://github.com/artemsen/swayimg) - Image viewer
 ---
 * [jq](https://github.com/stedolan/jq) - Command-line JSON processor
 * [wl-clipboard](https://github.com/bugaevc/wl-clipboard) - Command-line copy/paste utilities

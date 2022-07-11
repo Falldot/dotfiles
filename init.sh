@@ -4,22 +4,24 @@ AUR=aur.archlinux.org
 
 pacman -Syu
 
-echo '[MY_SCRIPT] Установка alacritty fish wofi htop'
-sudo pacman -S alacritty fish wofi htop
-
 sudo mkdir -rf $HOME/$AUR
 sudo mkdir $HOME/screenshots
+
+echo '[MY_SCRIPT] Bin'
+ln -s $(pwd)/.local/bin $HOME/.local/bin
 
 echo '[MY_SCRIPT] Установка yay'
 sudo pacman -S git
 cd $HOME/$AUR && git clone https://$AUR/yay.git && cd yay && makepkg -si 
 yay -Y --gendb
 
-echo '[MY_SCRIPT] Sway'
-yay -S wayland polkit sway swaybg-git swayimg-git swaylock-git swaylock-effects-git swayidle-git waybar-git wlay-git wl-clipboard-git otf-font-awesome swaync-git grim-git slurp-git swappy-git jq-git
+yay -Syu
 
-echo '[MY_SCRIPT] Установка Fira Code шрифт'
-yay -S ttf-fira-code nerd-fonts-fira-code
+echo '[MY_SCRIPT] Sway'
+yay -S wayland sway swaybg swappy swayimg swaync swayidle swaylock-effects wofi waybar wlay wl-clipboard grim slurp jq alacritty fish htop polkit
+
+echo '[MY_SCRIPT] Установка шрифтов'
+yay -S ttf-fira-code nerd-fonts-fira-code otf-font-awesome
 
 echo '[MY_SCRIPT] Pipeware'
 yay -S pipewire pw-volume
@@ -48,5 +50,3 @@ ln -s $(pwd)/.config/fish $HOME/.config
 echo '[MY_SCRIPT] Wofi'
 rm -rf $HOME/.config/wofi
 ln -s $(pwd)/.config/wofi $HOME/.config
-
-sudo pacman -Sc
