@@ -31,21 +31,15 @@ window#waybar {
     background-color: #eb4d4b;
 }
 
-#custom-pipewire {
-    color: #fff;
-    font-weight: 600;
-}
-
-#network, #custom-notification {
-    padding-right: 10px;
-}
-
+#custom-pipewire,
+#network,
+#custom-notification,
 #clock,
 #tray,
 #language
 {
     font-weight: 600;
     color: #fff;
-    padding: 0 10px;
+    padding-right: 10px;
     margin: 0 0px;
 }
