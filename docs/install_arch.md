@@ -180,14 +180,26 @@ ping google.com
 pacman
 ```sh
 sudo nano /etc/pacman.conf
+# ParallelDownloads = threads + 1
+#
 # multitub
 # include ...
+
+sudo nano /etc/pacman.d/mirrorlist
+# Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
 ```
+
+# SSD
+
+```sh
+sudo systemctl enable fstrim.timer
+```
+
 
 # Видеокарта
 
 ```sh
-sudo pacman -Suy nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vilkan-icd-loader lib32-vulkan-icd-loader lib32-opencl-nvidia opencl-nvidia libxnvctrl
+sudo pacman -Suy mesa vulkan-icd-loader libva-mesa-driver mesa-vdpau
 
 reboot
 ```
