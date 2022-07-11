@@ -2,6 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+alias code "vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland"
+
+alias gh "cd $HOME/github.com/Falldot/ && ls"
+alias skh "cd $HOME/git.sakh.com/Falldot/ && ls"
+
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
