@@ -45,4 +45,8 @@ chsh -s /usr/bin/fish
 rm -rf $HOME/.config/fish
 ln -s $(pwd)/.config/fish $HOME/.config
 
+echo '[MY_SCRIPT] Wofi'
+rm -rf $HOME/.config/wofi
+ln -s $(pwd)/.config/wofi $HOME/.config
+
 sudo pacman -Sc

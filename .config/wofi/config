@@ -1,0 +1,24 @@
+# режим запуска
+mode=drun,run
+
+# скрыть подменю
+no_actions=true
+# скрыть полосу прокрутки
+hide_scroll=true
+
+width=700
+
+location=2
+
+yoffset=50
+
+# количество колонок
+columns=1
+# надпись в строке поиска
+prompt=...
+# терминал
+term=alacritty
+
+# размер иконок
+image_size=24
+allow_images=true

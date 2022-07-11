@@ -15,9 +15,6 @@ set $right l
 # Terminal emulator
 set $term alacritty
 
-# Menu
-set $menu exec wofi --show drun
-
 # Обои
 output * bg /home/falldot/bg.jpg fill
 
@@ -101,7 +98,6 @@ bindsym $mod+BackSpace kill
 ####################################
 
 bindsym --to-code {
-    $mod+p exec $menu
     $mod+0 exec $lockman
 
     # Move your focus around
