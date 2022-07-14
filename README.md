@@ -24,7 +24,7 @@
     * [pw-volume](https://github.com/smasher164/pw-volume) - Basic interface to PipeWire volume controls
 ---
 * [fish](https://github.com/fish-shell/fish-shell) - Command line shell
-* [alacritty](https://github.com/alacritty/alacritty) - Terminal emulator
+* [foot](https://codeberg.org/dnkl/foot) - Terminal emulator
 * [wofi](https://hg.sr.ht/~scoopta/wofi) - Launcher/menu program
 * [htop](https://github.com/htop-dev/htop) - Process viewer
 

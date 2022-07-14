@@ -7,9 +7,6 @@ pacman -Syu
 sudo mkdir -rf $HOME/$AUR
 sudo mkdir $HOME/screenshots
 
-echo '[MY_SCRIPT] Bin'
-ln -s $(pwd)/.local/bin $HOME/.local/bin
-
 echo '[MY_SCRIPT] Установка yay'
 sudo pacman -S git
 cd $HOME/$AUR && git clone https://$AUR/yay.git && cd yay && makepkg -si 
@@ -38,9 +35,9 @@ echo '[MY_SCRIPT] Swaync'
 rm -rf $HOME/.config/swaync
 ln -s $(pwd)/.config/swaync $HOME/.config
 
-echo '[MY_SCRIPT] Alacritty'
-rm -rf $HOME/.config/alacritty
-ln -s $(pwd)/.config/alacritty $HOME/.config
+echo '[MY_SCRIPT] Foot'
+rm -rf $HOME/.config/foot
+ln -s $(pwd)/.config/foot $HOME/.config
 
 echo '[MY_SCRIPT] Fish'
 chsh -s /usr/bin/fish
