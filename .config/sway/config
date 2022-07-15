@@ -16,7 +16,7 @@ set $right l
 set $term foot
 
 # Обои
-output * bg /home/falldot/bg.jpg fill
+output * bg /home/falldot/Wallpapers/bg.jpg fill
 
 # Отступы
 gaps inner 0

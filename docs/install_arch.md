@@ -194,12 +194,3 @@ sudo nano /etc/pacman.d/mirrorlist
 ```sh
 sudo systemctl enable fstrim.timer
 ```
-
-
-# Видеокарта
-
-```sh
-sudo pacman -Suy mesa vulkan-icd-loader libva-mesa-driver mesa-vdpau
-
-reboot
-```
