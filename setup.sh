@@ -1,7 +1,5 @@
 #!/bin/sh
 
-AUR=aur.archlinux.org
-
 #-----------------------------------------------------
 
 # Video drivers
@@ -15,14 +13,6 @@ packages3="pipewire pw-volume"
 packages4="sweet-gtk-theme-dark ttf-fira-code nerd-fonts-fira-code otf-font-awesome"
 
 #-----------------------------------------------------
-
-# YAY
-
-pacman -Syu git
-
-sudo mkdir -rf $HOME/$AUR
-cd $HOME/$AUR && git clone https://$AUR/yay.git && cd yay && makepkg -si 
-yay -Y --gendb
 
 yay -Syu $packages0 $packages1 $packages2 $packages3 $packages4
 

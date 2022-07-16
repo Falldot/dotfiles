@@ -77,7 +77,7 @@ mount ${boot_раздел} /mnt/boot/EFI # если EFI
 
 # Установка системы
 ```sh
-pacstrap -i /mnt base linux-zen linux-zen-headers linux-firmware btrfs-progs intel-ucode iucode-tool nano
+pacstrap -i /mnt base base-devel linux-zen linux-zen-headers linux-firmware btrfs-progs intel-ucode iucode-tool nano
 ```
 
 Файл конфигурации файловых систем
@@ -137,7 +137,7 @@ passwd
 
 Загрузчик
 ```sh
-pacman -S grub efibootmgr sudo dhcpcd dhclient networkmanager
+pacman -S grub efibootmgr dhcpcd dhclient networkmanager
 
 grub-install ${диск}
 # если ошибка
@@ -194,3 +194,11 @@ sudo nano /etc/pacman.d/mirrorlist
 ```sh
 sudo systemctl enable fstrim.timer
 ```
+
+# YAY
+
+pacman -Syu git
+
+sudo mkdir -rf $HOME/aur.archlinux.org
+cd $HOME/aur.archlinux.org && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si 
+yay -Y --gendb
