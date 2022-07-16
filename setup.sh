@@ -8,11 +8,11 @@ AUR=aur.archlinux.org
 packages0="mesa vulkan-icd-loader libva-mesa-driver mesa-vdpau"
 # Main system packages 
 packages1="wayland sway swaybg swappy swayimg swaync swayidle swaylock-effects"
-packages2="wofi waybar wl-clipboard grim slurp jq foot fish htop polkit mpv"
+packages2="wofi waybar wl-clipboard grim slurp jq foot fish htop polkit mpv nnn"
 # Sounds
 packages3="pipewire pw-volume"
-# Fonts
-packages4="ttf-fira-code nerd-fonts-fira-code otf-font-awesome"
+# Theme and Fonts
+packages4="sweet-gtk-theme-dark ttf-fira-code nerd-fonts-fira-code otf-font-awesome"
 
 #-----------------------------------------------------
 

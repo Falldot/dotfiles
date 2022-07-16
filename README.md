@@ -1,7 +1,7 @@
 # Arch + Sway
 
 ![screenshot](https://github.com/Falldot/dotfiles/blob/master/img/swappy-20220712_094601.png)
-## Software
+## Main
 
 * [sway](https://github.com/swaywm/sway) - Tiling window manager, i3-compatible Wayland compositor
 * [waybar](https://github.com/Alexays/Waybar) - Bar
@@ -10,6 +10,7 @@
 * [swaylock-effects](https://github.com/mortie/swaylock-effects) - Screen locker
 * [swayidle](https://github.com/swaywm/swayidle) - Idle management daemon
 ---
+* [nnn](https://github.com/jarun/nnn) - File manager
 * [mpv](https://github.com/mpv-player/mpv) - Video player
 * [swayimg](https://github.com/artemsen/swayimg) - Image viewer
 ---
@@ -28,8 +29,11 @@
 * [jq](https://github.com/stedolan/jq) - Command-line JSON processor
 * [wl-clipboard](https://github.com/bugaevc/wl-clipboard) - Command-line copy/paste utilities
 
-## Fonts
-
+## Theme and Fonts
+* [Sweet-Dark](https://github.com/EliverLara/Sweet) - Dark colorful Gtk3.20+ theme
+---
 * [FiraCode](https://github.com/tonsky/FiraCode) - Monospaced font with programming ligatures
 * [FiraCodeNerd](https://github.com/ryanoasis/nerd-fonts) - Icon patcher for Fira Code
 * [FontAwesome](https://github.com/FortAwesome/Font-Awesome) - The iconic font
+
+## SoftWare

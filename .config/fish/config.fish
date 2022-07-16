@@ -7,6 +7,8 @@ alias code "vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland
 alias gh "cd $HOME/github.com/Falldot && cd"
 alias skh "cd $HOME/git.sakh.com/Falldot && cd"
 
+alias ls='nnn -de'
+
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
