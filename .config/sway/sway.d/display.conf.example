@@ -1,0 +1,11 @@
+output "HDMI-A-1" {
+        mode 1920x1080@60Hz
+        pos 1910 0
+        transform normal
+}
+
+output "DP-1" {
+        mode 1920x1080@60Hz
+        pos 0 0
+        transform normal
+}
