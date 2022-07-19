@@ -4,8 +4,8 @@
 
 # Video drivers
 packages0="mesa vulkan-icd-loader libva-mesa-driver mesa-vdpau"
-# Main system packages 
-packages1="wayland sway swaybg swappy swayimg swaync swayidle swaylock-effects"
+# Main system packages
+packages1="wayland sway swappy swayimg swaync swayidle swaylock-effects"
 packages2="wofi waybar wl-clipboard grim slurp jq foot fish htop polkit mpv nnn"
 # Sounds
 packages3="pipewire pw-volume"

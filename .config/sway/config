@@ -1,5 +1,3 @@
-# Автозапуск
-exec waybg -i ~/bg.jpg
 # Notification Daemon
 exec swaync
 
@@ -8,8 +6,8 @@ set $mod Mod4
 
 # Home row direction keys, like vim
 set $left h
-set $down j
-set $up k
+set $down k
+set $up j
 set $right l
 
 # Terminal emulator
@@ -26,7 +24,7 @@ smart_gaps off
 # Отключаем заголовки окн
 default_border pixel 0
 
-titlebar_border_thickness 0                                                     
+titlebar_border_thickness 0
 titlebar_padding 1
 
 # Размер рамок
@@ -48,7 +46,7 @@ smart_borders on
 	#client.focused — окно в фокусе
 	#client.unfocused — окно вне фокуса
 	#client.focused_inactive — окно в фокусе но не активно
-	#client.urgent — окно требует внимания (всплывающее) 
+	#client.urgent — окно требует внимания (всплывающее)
 
 # Шрифт
 font pango:FiraCode Nerd Font 9
@@ -126,17 +124,14 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 
 # Moving around:
 #
-    
     # Or use $mod+[up|down|left|right]
     # bindsym $mod+Left focus left
     # bindsym $mod+Down focus down
     # bindsym $mod+Up focus up
     # bindsym $mod+Right focus right
 
-    
 # Workspaces:
 #
-    
     # Switch to workspace
 
     bindsym $mod+1 workspace number 1
