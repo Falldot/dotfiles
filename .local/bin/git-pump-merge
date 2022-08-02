@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git stash
+git checkout v2
+git pull upstream v2
+git push
+git checkout -
+git rebase v2
+git stash pop
