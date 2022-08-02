@@ -5,9 +5,7 @@
     "editor.fontSize": 13,
     "terminal.integrated.fontSize": 12,
     "editor.lineHeight": 21,
-    "gopls": {
-        "ui.semanticTokens": true
-    },
+    "editor.formatOnSave": false,
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "telemetry.telemetryLevel": "off",
@@ -610,9 +608,7 @@
         "golang.go-nightly",
         "eamodio.gitlens"
     ],
-    "debug.onTaskErrors": "debugAnyway",
-    "git.ignoreRebaseWarning": true,
-    "redhat.telemetry.enabled": true,
-    "go.toolsManagement.autoUpdate": true,
-    "editor.linkedEditing": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

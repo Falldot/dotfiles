@@ -3,7 +3,7 @@
 		"prefix": "vb",
 		"body": [
 			"<template>",
-			"\t<div>",
+			"\t<div class=\"${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\">",
 			"\t\t${1}",
 			"\t</div>",
 			"</template>",
