@@ -1,9 +1,10 @@
 #!/bin/sh
-# Times the screen off and puts it to background
+
+# Время выключения экрана и перевод его в фоновый режим
 swayidle \
     timeout 10 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' &
-# Locks the screen immediately
-swaylock --clock --indicator --screenshots --ring-color c50ed2 --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %d.%m.%Y" --timestr "%k:%M"
-# Kills last background task so idle timer doesn't keep running
+# Блокируем экран
+exec bash ~/.config/sway/scripts/lockscript.sh
+# Убивает последнюю фоновую задачу, поэтому таймер простоя не продолжает работать
 kill %%

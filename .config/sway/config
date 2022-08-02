@@ -73,19 +73,6 @@ exec_always {
         gsettings set $gnome-schema font-name 'Open Sans 10'
 }
 
-# swaylock
-
-set $lock swaylock --clock --indicator --screenshots --ring-color c50ed2 --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %d.%m.%Y" --timestr "%k:%M"
-
-exec swayidle -w \
-    timeout 300 $lock \
-    timeout 600 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep $lock
-
-set $lockman exec bash ~/.config/sway/scripts/lockman.sh
-
-
 floating_modifier $mod normal
 
 # Бинды
@@ -96,8 +83,6 @@ bindsym $mod+BackSpace kill
 ####################################
 
 bindsym --to-code {
-    $mod+0 exec $lockman
-
     # Move your focus around
     $mod+$left focus left
     $mod+$down focus down
