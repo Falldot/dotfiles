@@ -1,28 +1,36 @@
 {
-    "editor.rulers": [
-        100
-    ],
+    // Editor
+    "editor.rulers": [ 100 ],
     "editor.fontSize": 13,
-    "terminal.integrated.fontSize": 12,
     "editor.lineHeight": 21,
     "editor.formatOnSave": false,
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
-    "telemetry.telemetryLevel": "off",
     "editor.guides.bracketPairs": true,
     "editor.guides.bracketPairsHorizontal": true,
     "editor.fontFamily": "'Fira Code', 'Font Awesome 6 Brands', 'Font Awesome 6 Free', 'Font Awesome 6 Free Solid'",
+
+    // Terminal
+    "terminal.integrated.fontSize": 12,
+
+    // Telemetry
+    "telemetry.telemetryLevel": "off",
+
+    // Explorer
     "explorer.decorations.badges": false,
-    "workbench.iconTheme": "eq-material-theme-icons",
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.go": "$(capture)*.go",
         "go.mod": "go.sum, .gitignore, Makefile, README.md",
         "*.vue": "$(capture)*.vue",
-        ".eslintrc.js": ".eslintcache",
-        "nuxt.config.*": "jsconfig.*, tsconfig.*, .editorconfig, jest.config.js, .babelrc",
-        "package.json": "package-lock.json, yarn.lock, *.md, .gitignore, site.unit.json, Makefile, vite.config.*, ts.config.*",
+        ".eslintrc.json": ".*rc",
+        "nuxt.config.*": "jsconfig.*, tsconfig.*, *.config.js, *.config.ts",
+        "package.json": "package-lock.json, *.lock",
+        ".gitignore": ".*ignore",
+        "*.md": ""
     },
+
+    // Syntax
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -592,23 +600,6 @@
         "panelTitle.activeForeground": "#FFFFFF",
         "panelTitle.activeBorder": "#cca15c"
     },
-    "git.confirmSync": false,
-    "settingsSync.ignoredExtensions": [
-        "austin.code-gnu-global",
-        "hars.cppsnippets",
-        "mitaki28.vscode-clang",
-        "ms-vscode.cpptools",
-        "jeff-hykin.better-cpp-syntax",
-        "ms-vscode-remote.remote-wsl",
-        "rangav.vscode-thunder-client",
-        "vue.volar",
-        "redhat.vscode-yaml",
-        "ms-azuretools.vscode-docker",
-        "golang.go",
-        "golang.go-nightly",
-        "eamodio.gitlens"
-    ],
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    "mesonbuild.configureOnOpen": true,
+    "tabnine.experimentalAutoImports": true
 }
