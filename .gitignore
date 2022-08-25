@@ -1,4 +1,5 @@
 .config/sway/sway.d/display.conf
+.config/nvim/plugin
 
 settings/VSCodium/User/*
 !settings/VSCodium/User/snippets/
