@@ -6,10 +6,7 @@ end
 
 alias code "vscodium --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
-alias gh "cd $HOME/github.com/Falldot && cd"
-alias skh "cd $HOME/git.sakh.com/Falldot && cd"
-
-alias ls='nnn -de'
+alias mvi='mpv --config-dir=$HOME/.config/mvi'
 
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -23,7 +20,7 @@ set __fish_git_prompt_char_stagedstate '→'
 set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
- 
+
 function fish_prompt
     set last_status $status
     set_color $fish_color_cwd
@@ -32,3 +29,10 @@ function fish_prompt
     printf '%s ' (__fish_git_prompt)
     set_color normal
 end
+
+export GOPATH=$HOME/go
+export GOROOT=/usr/lib/go
+export PATH="$PATH:$GOPATH"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$GOROOT/bin"
+export PATH="$PATH:$GOPATH/bin"
