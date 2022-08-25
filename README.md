@@ -12,7 +12,7 @@
 ---
 * [nnn](https://github.com/jarun/nnn) - File manager
 * [mpv](https://github.com/mpv-player/mpv) - Video player
-* [swayimg](https://github.com/artemsen/swayimg) - Image viewer
+* [mvi](https://github.com/occivink/mpv-image-viewer) - Image viewer
 ---
 * [swappy](https://github.com/jtheoof/swappy) - Snapshot editing tool
     * [grim](https://github.com/emersion/grim) - Grab images
