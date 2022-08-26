@@ -5,7 +5,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
-return require('packer').startup {
+return require('packer').startup{
 	function(use)
 		use 'wbthomason/packer.nvim'
 
@@ -29,6 +29,10 @@ return require('packer').startup {
 		use 'hrsh7th/cmp-buffer'
 		-- https://github.com/hrsh7th/cmp-path
 		use 'hrsh7th/cmp-path'
+		use 'hrsh7th/cmp-cmdline'
+		use 'hrsh7th/cmp-nvim-lua'
+		-- https://github.com/saadparwaiz1/cmp_luasnip
+		use 'saadparwaiz1/cmp_luasnip'
 
 		-- Quickstart configs for Nvim LSP
 		-- https://github.com/neovim/nvim-lspconfig
@@ -76,6 +80,7 @@ return require('packer').startup {
 			'tzachar/cmp-tabnine',
 			run='./install.sh'
 		}
+
 		use('onsails/lspkind-nvim')
 
 		-- Навигация по файлам
@@ -98,10 +103,6 @@ return require('packer').startup {
 				})
 			end
 		}
-
-		-- Автодополнения для сниппетов
-		-- https://github.com/saadparwaiz1/cmp_luasnip
-		use 'saadparwaiz1/cmp_luasnip'
 
 		-- Набор готовых сниппетов для всех языков
 		-- https://github.com/rafamadriz/friendly-snippets
@@ -178,6 +179,10 @@ return require('packer').startup {
 			end
 		}
 
+		local ok, error = pcall(require, 'plugins.lspconfig')
+		if not ok then
+			vim.notify('Error. Can\'t load LSP settings: ' .. error)
+		end
 
 		if packer_bootstrap then
 			require('packer').sync()

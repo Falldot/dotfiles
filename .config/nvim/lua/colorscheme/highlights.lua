@@ -109,20 +109,20 @@ hl.syntax = {
     Type = hl.predef.Yellow,
     Keyword = hl.predef.Violet,
     StorageClass = hl.predef.Blue,
-
+    
     Identifier = hl.predef.Red,
-
+    
     Include = hl.predef.Anakiwa,
     Macro = hl.predef.Anakiwa,
     Define = hl.predef.Anakiwa,
     PreProc = hl.predef.Anakiwa,
     Constant = hl.predef.AnakiwaItalic,
-
+    
     PreCondit = hl.predef.Violet,
     Conditional = hl.predef.Violet,
     Repeat = hl.predef.Violet,
     Statement = hl.predef.Violet,
-
+    
     Label = hl.predef.White,
     Special = hl.predef.White,
     SpecialChar = hl.predef.White,
@@ -130,7 +130,7 @@ hl.syntax = {
     Number = hl.predef.White,
     Float = hl.predef.White,
     Operator = hl.predef.White,
-
+    
     Exception = hl.predef.Red,
     Error = hl.predef.Red,
     Title = hl.predef.Yellow,

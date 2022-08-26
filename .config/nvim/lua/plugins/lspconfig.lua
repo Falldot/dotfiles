@@ -1,31 +1,50 @@
 local lspconfig = require('lspconfig')
 local util = require('lspconfig/util')
+local installer = require('nvim-lsp-installer')
+local cmp_nvim_lsp = require('cmp_nvim_lsp')
+
 local attach = require('plugins.lsp')
 
-local function config(_config)
-    return vim.tbl_deep_extend('force', {
-        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-    }, _config or {})
+
+installer.setup({})
+
+local config = {
+  virtual_text = true,
+  update_in_insert = true,
+  underline = true,
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "single",
+    source = "always",
+  },
+}
+
+vim.diagnostic.config(config)
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = "none",
+})
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  border = "none",
+})
+
+local servers = installer.get_installed_servers()
+local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+for _, server in pairs(servers) do
+  local ok, settings = pcall(require, "plugins.lsp." .. server.name)
+  if not ok then
+    settings = {}
+  end
+
+  vim.notify(server.name)
+
+  lspconfig[server.name].setup({
+    on_attach = attach,
+    capabilities = capabilities,
+    settings = settings,
+  })
 end
-
--- Иницализация gopls LSP для Go
--- https://github.com/golang/tools/tree/master/gopls
--- https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-install
-lspconfig.gopls.setup(config({
-  on_attach = require('plugins.lsp'),
-  cmd = { 'gopls', 'serve' },
-  filetypes = { 'go', 'go.mod' },
-  root_dir = util.root_pattern('go.mod', '.git'),
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-        shadow = true,
-      },
-      staticcheck = true,
-    }
-  }
-}))
-
--- clangd
-lspconfig.clangd.setup{}

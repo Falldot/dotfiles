@@ -7,6 +7,7 @@ local source_mapping = {
     nvim_lua = '[Lua]',
     cmp_tabnine = '[TN]',
     path = '[Path]',
+    cmdline  = "[CmdLine]",
 }
 
 cmp.setup({
@@ -60,6 +61,7 @@ cmp.setup({
         end
     },
     sources = cmp.config.sources({
+        { name = "path" },
         { name = 'cmp_tabnine' },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
@@ -74,4 +76,17 @@ require('cmp_tabnine.config'):setup({
     sort = true,
     run_on_every_keystroke = true,
     snippet_placeholder = '..',
+})
+
+cmp.setup.cmdline(':', {
+    sources = {
+        { name = "path" },
+        { name = 'cmdline' }
+    }
+})
+
+cmp.setup.cmdline('/', {
+    sources = {
+        { name = 'buffer' }
+    }
 })

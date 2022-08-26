@@ -21,15 +21,6 @@ function tm(key, command)
 	map('t', key, command, opt)
 end
 
--- copy
-ns('<C-c>', '"+y')
--- paste
-ns('<C-v>', '"+p')
--- cut
-ns('<C-x>', '"+d')
--- paste in insert mode
-ns('<C-v>', '<Esc>"+pa')
-
 vm('<', '<gv')
 vm('>', '>gv')
 
@@ -44,21 +35,13 @@ nm('<leader>q', '<cmd>Telescope buffers<CR>')       -- Буфферы
 -- Nvim-tree
 nm('<leader>t', '<cmd>NvimTreeToggle<CR>')
 
--- Tabs
-nm('<Tab>', '>>_')
-nm('<S-Tab>', '<<_')
-vm('<Tab>', '>>_')
-vm('<S-Tab>', '<<_')
-ns('<Tab>', '\t')
-ns('<S-Tab>', '\b')
+nm('<C-h>', '<C-w>h')
+nm('<C-j>', '<C-w>j')
+nm('<C-k>', '<C-w>k')
+nm('<C-l>', '<C-w>l')
 
--- opening terminal with shortcut
-ns('<Leader><CR>', '<Cmd>silent !$TERM &<CR>')
-
--- jumping back and forth
-ns('<C-K>', '<C-O>')
-
-ns('<C-L>', '<C-I>')
+nm('<leader><Enter>', '<Cmd>sp | term<CR>')
+nm('<leader><Backspace>', '<Cmd>q<CR>')
 
 -- comments
 vm('<C-/>', 'gcc')
