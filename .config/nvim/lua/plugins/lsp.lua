@@ -1,5 +1,4 @@
 local map = vim.keymap.set
-local hi = vim.highlight.create
 local opts = { noremap=true, silent=true }
 
 vim.diagnostic.config({ signs=false })

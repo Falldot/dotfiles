@@ -65,13 +65,20 @@ return require('packer').startup{
 			end
 		}
 
+		use {
+			'lukas-reineke/indent-blankline.nvim',
+			config = function()
+				require('plugins.indent-blankline')
+			end
+		}
+
 		-- Удобное меню для обозрения проблем LSP
 		use {
 			"folke/trouble.nvim",
 			requires = "kyazdani42/nvim-web-devicons",
 			config = function()
 				require("trouble").setup {}
-			end,
+			end
 		}
 
 		-- ИИ автодополнения
@@ -82,6 +89,8 @@ return require('packer').startup{
 		}
 
 		use('onsails/lspkind-nvim')
+
+		use {"ellisonleao/glow.nvim"}
 
 		-- Навигация по файлам
 		-- https://github.com/nvim-telescope/telescope.nvim
@@ -143,6 +152,11 @@ return require('packer').startup{
 				require('Comment').setup()
 			end
 		}
+
+        use {
+            "windwp/nvim-autopairs",
+            config = function() require("nvim-autopairs").setup {} end
+        }
 
 		use {
 			'norcalli/nvim-colorizer.lua',

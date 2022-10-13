@@ -40,8 +40,6 @@ for _, server in pairs(servers) do
     settings = {}
   end
 
-  vim.notify(server.name)
-
   lspconfig[server.name].setup({
     on_attach = attach,
     capabilities = capabilities,
