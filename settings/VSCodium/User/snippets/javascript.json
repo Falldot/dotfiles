@@ -1,150 +1,103 @@
 {
-	// Vue2
-	"Data": {
-		"prefix": ["vd", "data"],
-		"body": [
-			"data () {",
-			"\treturn {",
-			"\t\t${1:name}: ${2:value}",
-			"\t}",
-			"}",
-		]
-	},
-	"Provide": {
-		"prefix": ["vpr", "provide"],
-		"body": [
-			"provide () {",
-			"\treturn {",
-			"\t\t${1:name}: ${2:value}",
-			"\t}",
-			"}",
-		]
-	},
-	"Inject": {
-		"prefix": ["vi", "inject"],
-		"body": [
-			"inject: ['${1:name}']"
-		]
-	},
-	"Methods": {
-		"prefix": ["vm", "methods"],
-		"body": [
-			"methods: {",
-			"\t${1:name} (${2:value}) {",
-			"\t\t${3}",
-			"\t}",
-			"}",
-		]
-	},
-	"Fetch": {
-		"prefix": ["vfch", "fetch"],
-		"body": [
-			"async fetch () {",
-			"\t${1:name}",
-			"}",
-		]
-	},
-	"AsyncData": {
-		"prefix": ["vad", "asyncData"],
-		"body": [
-			"async asyncData () {",
-			"\treturn ${1:value}",
-			"}",
-		]
-	},
-	"Computed": {
-		"prefix": ["vc", "computed"],
-		"body": [
-			"computed: {",
-			"\t${1:name} () {",
-			"\t\treturn ${2}",
-			"\t}",
-			"}",
-		]
-	},
-	"Filters": {
-		"prefix": ["vf", "filtres"],
-		"body": [
-			"filters: {",
-			"\t${1:name}: function (${2:value}) {",
-			"\t\treturn ${3:value}",
-			"\t}",
-			"}",
-		]
-	},
-	"Components": {
-		"prefix": ["vcmp", "components"],
-		"body": [
-			"components: {",
-			"\t${1:component}",
-			"}",
-		]
-	},
-	"Props": {
-		"prefix": ["vps","props"],
-		"body": [
-			"props: {",
-			"\t${1:data}: {",
-			"\t\ttype: ${2:type},",
-			"\t\trequired: true,",
-			"\t}",
-			"}",
-		]
-	},
-	"PropsDefault": {
-		"prefix": ["vpsd","propsd"],
-		"body": [
-			"props: {",
-			"\t${1:data}: {",
-			"\t\ttype: ${2:type},",
-			"\t\tdefault () {",
-			"\t\t\treturn ${3:value}",
-			"\t\t}",
-			"\t}",
-			"}",
-		]
-	},
-	"Prop": {
-		"prefix": ["vp", "prop"],
-		"body": [
-			"${1:data}: {",
-			"\ttype: ${2:type},",
-			"\trequired: true,",
-			"}",
-		]
-	},
-	"PropDefault": {
-		"prefix": ["vpd", "propd"],
-		"body": [
-			"${1:data}: {",
-			"\ttype: ${2:type},",
-			"\tdefault () {",
-			"\t\treturn ${3:value}",
-			"\t}",
-			"}",
-		]
-	},
-	// JS
-	"ConsoleLog": {
-		"prefix": ["cl", "console"],
-		"body": [
-			"console.log('${1:hi}')",
-		]
-	},
-	"Class": {
-		"prefix": ["c", "class"],
-		"body": [
-			"class ${1:Name} {",
-			"\tconstructor () {",
-			"\t\t${2}",
-			"\t}",
-			"}"
-		]
-	},
-	"Len": {
-		"prefix": ["len"],
-		"body": [
-			"length"
-		]
-	}
+  // Vue2
+  "Data": {
+    "prefix": ["vd", "data"],
+    "body": ["data () {", "\treturn {", "\t\t${1:name}: ${2:value}", "\t}", "}"]
+  },
+  "Provide": {
+    "prefix": ["vpr", "provide"],
+    "body": [
+      "provide () {",
+      "\treturn {",
+      "\t\t${1:name}: ${2:value}",
+      "\t}",
+      "}"
+    ]
+  },
+  "Inject": {
+    "prefix": ["vi", "inject"],
+    "body": ["inject: ['${1:name}']"]
+  },
+  "Methods": {
+    "prefix": ["vm", "methods"],
+    "body": ["methods: {", "\t${1:name} (${2:value}) {", "\t\t${3}", "\t}", "}"]
+  },
+  "Fetch": {
+    "prefix": ["vfch", "fetch"],
+    "body": ["async fetch () {", "\t${1:name}", "}"]
+  },
+  "AsyncData": {
+    "prefix": ["vad", "asyncData"],
+    "body": ["async asyncData () {", "\treturn ${1:value}", "}"]
+  },
+  "Computed": {
+    "prefix": ["vc", "computed"],
+    "body": ["computed: {", "\t${1:name} () {", "\t\treturn ${2}", "\t}", "}"]
+  },
+  "Filters": {
+    "prefix": ["vf", "filtres"],
+    "body": [
+      "filters: {",
+      "\t${1:name}: function (${2:value}) {",
+      "\t\treturn ${3:value}",
+      "\t}",
+      "}"
+    ]
+  },
+  "Components": {
+    "prefix": ["vcmp", "components"],
+    "body": ["components: {", "\t${1:component}", "}"]
+  },
+  "Props": {
+    "prefix": ["vps", "props"],
+    "body": [
+      "props: {",
+      "\t${1:data}: {",
+      "\t\ttype: ${2:type},",
+      "\t\trequired: true,",
+      "\t}",
+      "}"
+    ]
+  },
+  "PropsDefault": {
+    "prefix": ["vpsd", "propsd"],
+    "body": [
+      "props: {",
+      "\t${1:data}: {",
+      "\t\ttype: ${2:type},",
+      "\t\tdefault () {",
+      "\t\t\treturn ${3:value}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ]
+  },
+  "Prop": {
+    "prefix": ["vp", "prop"],
+    "body": ["${1:data}: {", "\ttype: ${2:type},", "\trequired: true,", "}"]
+  },
+  "PropDefault": {
+    "prefix": ["vpd", "propd"],
+    "body": [
+      "${1:data}: {",
+      "\ttype: ${2:type},",
+      "\tdefault () {",
+      "\t\treturn ${3:value}",
+      "\t}",
+      "}"
+    ]
+  },
+  // JS
+  "ConsoleLog": {
+    "prefix": ["cl", "console"],
+    "body": ["console.log('${1:hi}')"]
+  },
+  "Class": {
+    "prefix": ["c", "class"],
+    "body": ["class ${1:Name} {", "\tconstructor () {", "\t\t${2}", "\t}", "}"]
+  },
+  "Len": {
+    "prefix": ["len"],
+    "body": ["length"]
+  }
 }
