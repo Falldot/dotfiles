@@ -28,6 +28,7 @@
 ---
 * [jq](https://github.com/stedolan/jq) - Command-line JSON processor
 * [wl-clipboard](https://github.com/bugaevc/wl-clipboard) - Command-line copy/paste utilities
+* [wl-color-picker](https://github.com/jgmdev/wl-color-picker) - Color picker
 
 ## Theme and Fonts
 * [Sweet-Dark](https://github.com/EliverLara/Sweet) - Dark colorful Gtk3.20+ theme
