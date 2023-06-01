@@ -6,7 +6,7 @@
 packages0="mesa vulkan-icd-loader libva-mesa-driver mesa-vdpau"
 # Main system packages
 packages1="wayland sway swappy swaync swayidle swaybg swaylock-effects"
-packages2="wofi waybar wl-clipboard wl-color-picker grim slurp jq foot fish htop polkit mpv nnn"
+packages2="wofi waybar wl-clipboard wl-color-picker grim slurp jq foot fish starship htop polkit mpv nnn"
 # Sounds
 packages3="pipewire pw-volume"
 # Theme and Fonts
