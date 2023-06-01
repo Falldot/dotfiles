@@ -1,0 +1,12 @@
+import:
+ - C:\Users\Falldot\AppData\Roaming\alacritty\alacritty.yml
+
+shell:
+  program: arch
+
+window:
+  title: Arch Linux
+
+colors:
+  primary:
+   background: '#12121e'
