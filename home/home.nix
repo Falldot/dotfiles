@@ -8,6 +8,7 @@ let
     zip
     unzip
     htop
+    direnv
   ];
 in {
   imports = [
@@ -26,6 +27,12 @@ in {
   xdg = {
     inherit configHome;
     enable = true;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true; # see note on other shells below
+    nix-direnv.enable = true;
   };
 
   home = {
