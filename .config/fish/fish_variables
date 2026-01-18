@@ -3,6 +3,9 @@
 SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:4300
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_martonperei_2F_fnm_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/fnm\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1emartonperei/fnm\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
@@ -29,7 +32,7 @@ SETUVAR pure_color_nixdevshell_prefix:pure_color_info
 SETUVAR pure_color_nixdevshell_symbol:pure_color_mute
 SETUVAR pure_color_normal:normal
 SETUVAR pure_color_prefix_root_prompt:pure_color_danger
-SETUVAR pure_color_primary:blue
+SETUVAR pure_color_primary:green
 SETUVAR pure_color_prompt_on_error:pure_color_danger
 SETUVAR pure_color_prompt_on_success:pure_color_success
 SETUVAR pure_color_success:magenta
