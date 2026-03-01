@@ -1,3 +1,6 @@
+# VIM mode
+fish_vi_key_bindings
+
 function fish_greeting
     # fastfetch
 end
@@ -69,3 +72,7 @@ alias remove="paru -Rns"
 alias upgrade="paru -Syu --skipreview --noconfirm --noupgrademenu"
 alias cleanup="paru -Rns (paru -Qtdq)"
 alias history="builtin history --show-time='%F %T '"
+
+# NeoVIM
+alias vi="nvim"
+alias vim="nvim"
