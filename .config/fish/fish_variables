@@ -71,7 +71,7 @@ SETUVAR pure_symbol_git_unpushed_commits:\u21e1
 SETUVAR pure_symbol_k8s_prefix:\u2638
 SETUVAR pure_symbol_nixdevshell_prefix:\u2744\ufe0f
 SETUVAR pure_symbol_prefix_root_prompt:\x23
-SETUVAR pure_symbol_prompt:\u276f
+SETUVAR pure_symbol_prompt:
 SETUVAR pure_symbol_reverse_prompt:\u276e
 SETUVAR pure_symbol_ssh_prefix:
 SETUVAR pure_symbol_title_bar_separator:\x2d
