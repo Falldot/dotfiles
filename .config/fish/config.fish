@@ -64,8 +64,8 @@ alias jctl="journalctl -p 3 -xb"
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 # Packaging
-alias add="paru -Sy"
+alias add="paru -Sy --skipreview --noconfirm --noupgrademenu"
 alias remove="paru -Rns"
-alias upgrade="paru -Syu"
+alias upgrade="paru -Syu --skipreview --noconfirm --noupgrademenu"
 alias cleanup="paru -Rns (paru -Qtdq)"
 alias history="builtin history --show-time='%F %T '"
