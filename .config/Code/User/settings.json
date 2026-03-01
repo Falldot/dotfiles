@@ -42,6 +42,7 @@
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.stickyScroll.enabled": false,
 
   // Разноцветные скобки
   "editor.guides.bracketPairs": true,
@@ -194,6 +195,21 @@
   },
   // Разцветка
   "workbench.colorCustomizations": {
+    // Редактор
+    "editor.background": "#121212",
+    "editor.findMatchBackground": "#171717",
+    "editor.findMatchBorder": "#202020",
+    "editor.findMatchHighlightBorder": "#33a71e",
+    "editor.selectionBackground": "#61616150",
+    "editor.selectionHighlightBackground": "#FFCC0020",
+
+    // Боковая панель
+    "sideBar.background": "#171717",
+    "sideBar.border": "#202020",
+    "sideBar.foreground": "#919191",
+    "sideBarSectionHeader.background": "#202020",
+    "sideBarSectionHeader.border": "#202020",
+
     "activityBar.activeBackground": "#313131",
     "activityBar.activeBorder": "#33a71e",
     "activityBar.background": "#202020",
@@ -206,12 +222,6 @@
     "breadcrumb.focusForeground": "#FFFFFF",
     "breadcrumb.foreground": "#919191",
     "breadcrumbPicker.background": "#121212",
-    "editor.background": "#121212",
-    "editor.findMatchBackground": "#171717",
-    "editor.findMatchBorder": "#202020",
-    "editor.findMatchHighlightBorder": "#33a71e",
-    "editor.selectionBackground": "#61616150",
-    "editor.selectionHighlightBackground": "#FFCC0020",
     "button.background":"#247815",
     "button.hoverBackground": "#33a71e",
     "editorCursor.foreground": "#33a71e",
@@ -232,11 +242,7 @@
     "input.border": "#202020",
     "input.foreground": "#fff",
     "input.placeholderForeground": "#919191",
-    "sideBar.background": "#171717",
-    "sideBar.border": "#202020",
-    "sideBar.foreground": "#919191",
-    "sideBarSectionHeader.background": "#202020",
-    "sideBarSectionHeader.border": "#202020",
+   
     "statusBar.background": "#202020",
     "statusBar.border": "#313131",
     "statusBar.debuggingBackground": "#33a71e",
@@ -291,4 +297,7 @@
   "javascript.preferences.quoteStyle": "double",
   "javascript.format.semicolons": "insert",
   "typescript.format.semicolons": "insert",
+
+  // Proxy
+  "http.proxy": "http://localhost:21080",
 }
