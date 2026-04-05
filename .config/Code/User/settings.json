@@ -68,6 +68,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   
   // Подсказки
+  "editor.hover.delay": 200,
   "editor.suggestSelection": "first",
   "editor.quickSuggestionsDelay": 0,
   "editor.inlineSuggest.enabled": true,
@@ -196,18 +197,18 @@
   // Разцветка
   "workbench.colorCustomizations": {
     // Редактор
-    "editor.background": "#121212",
-    "editor.findMatchBackground": "#171717",
+    "editor.background": "#090909",
+    "editor.findMatchBackground": "#090909",
     "editor.findMatchBorder": "#202020",
     "editor.findMatchHighlightBorder": "#33a71e",
     "editor.selectionBackground": "#61616150",
     "editor.selectionHighlightBackground": "#FFCC0020",
 
     // Боковая панель
-    "sideBar.background": "#171717",
+    "sideBar.background": "#090909",
     "sideBar.border": "#202020",
     "sideBar.foreground": "#919191",
-    "sideBarSectionHeader.background": "#202020",
+    "sideBarSectionHeader.background": "#090909",
     "sideBarSectionHeader.border": "#202020",
 
     "activityBar.activeBackground": "#313131",
@@ -217,13 +218,16 @@
     "activityBar.foreground": "#fff",
     "activityBarBadge.background": "#33a71e",
     "activityBarBadge.foreground": "#000",
+
     "breadcrumb.activeSelectionForeground": "#FFFFFF",
-    "breadcrumb.background": "#121212",
+    "breadcrumb.background": "#090909",
     "breadcrumb.focusForeground": "#FFFFFF",
     "breadcrumb.foreground": "#919191",
-    "breadcrumbPicker.background": "#121212",
+    "breadcrumbPicker.background": "#090909",
+
     "button.background":"#247815",
     "button.hoverBackground": "#33a71e",
+
     "editorCursor.foreground": "#33a71e",
     "editorError.foreground": "#FF537070",
     "editorGutter.addedBackground": "#C3E88D70",
@@ -236,14 +240,17 @@
     "editorOverviewRuler.infoForeground": "#FFCB6B70",
     "editorOverviewRuler.warningForeground": "#FFCB6B70",
     "editorWarning.foreground": "#FFCB6B70",
+
     "focusBorder": "#33a71e",
+
     "icon.foreground": "#919191",
-    "input.background": "#121212",
+    
+    "input.background": "#090909",
     "input.border": "#202020",
     "input.foreground": "#fff",
     "input.placeholderForeground": "#919191",
    
-    "statusBar.background": "#202020",
+    "statusBar.background": "#090909",
     "statusBar.border": "#313131",
     "statusBar.debuggingBackground": "#33a71e",
     "statusBar.debuggingForeground": "#000",
@@ -257,13 +264,14 @@
     "statusBarItem.remoteForeground": "#000",
     "statusBarItem.warningBackground": "#FFCB6B70",
     "statusBarItem.warningForeground": "#FFFFFF",
+
     "tab.activeBorder": "#33a71e",
-    "tab.activeBorderTop": "#171717",
+    "tab.activeBorderTop": "#090909",
     "tab.activeForeground": "#FFFFFF",
     "tab.activeModifiedBorder": "#33a71e",
     "tab.border": "#202020",
     "tab.hoverForeground": "#fff",
-    "tab.inactiveBackground": "#171717",
+    "tab.inactiveBackground": "#090909",
     "tab.inactiveForeground": "#7d7c7c",
     "tab.unfocusedActiveBorder": "#818181",
     "tab.unfocusedActiveForeground": "#FFFFFF",
@@ -271,7 +279,7 @@
     "textLink.foreground": "#33a71e",
 
     // Терминал
-    "terminal.background": "#121212",
+    "terminal.background": "#090909",
     "terminal.border": "#202020",
     "terminal.ansiBlack": "#545454",
     "terminal.ansiRed": "#FF5370",
@@ -286,18 +294,14 @@
   // HTML
   "editor.linkedEditing": true,
   "html.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
-  "typescript.autoClosingTags": true,
   "html.completion.attributeDefaultValue": "doublequotes",
 
   // JavaScript and Typescript
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.preferences.quoteStyle": "double",
-  "javascript.preferences.quoteStyle": "double",
-  "javascript.format.semicolons": "insert",
-  "typescript.format.semicolons": "insert",
+  "js/ts.autoClosingTags.enabled": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.preferences.quoteStyle": "double",
+  "js/ts.format.semicolons": "insert",
 
   // Proxy
-  "http.proxy": "http://localhost:21080",
+  "http.proxy": "http://localhost:21080"
 }
