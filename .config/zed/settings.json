@@ -1,0 +1,84 @@
+{
+  // Theme
+  "diff_view_style": "unified",
+  "ensure_final_newline_on_save": false,
+  "remove_trailing_whitespace_on_save": false,
+  "format_on_save": "off",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "cli_default_open_behavior": "new_window",
+  "inlay_hints": {
+    "enabled": true
+  },
+  "theme": "Falldot Theme for Zed",
+  "icon_theme": "Zed (Default)",
+
+  // UI
+  "disable_ai": true,
+  "title_bar": {
+    "show_sign_in": false,
+    "show_branch_status_icon": true,
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+
+  // Fonts
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "ui_font_family": "FiraCode Nerd Font",
+  "buffer_font_family": "FiraCode Nerd Font",
+  "terminal": {
+    "font_family": "FiraCode Nerd Font Mono",
+    "font_size": 14,
+  },
+
+  // Editor
+  "soft_wrap": "none",
+  "preferred_line_length": 80,
+  "show_wrap_guides": true,
+  "wrap_guides": [120],
+
+  // Diagnostics
+  "diagnostics_max_severity": "all",
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+
+  // Langs
+  "semantic_tokens": "combined",
+  "colorize_brackets": true,
+  "languages": {
+    "JSON": {
+      "indent_guides": {
+        "enabled": true,
+      },
+      "hard_tabs": false,
+    },
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+        },
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "always",
+            "useParameterNames": true,
+          },
+          "closureReturnTypeHints": {
+            "enable": "always",
+          },
+        },
+      },
+    },
+  },
+}
